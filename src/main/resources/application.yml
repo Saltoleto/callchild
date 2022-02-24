@@ -6,6 +6,9 @@ spring:
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    async:
+      request-timeout: -1
 
 server:
   servlet:

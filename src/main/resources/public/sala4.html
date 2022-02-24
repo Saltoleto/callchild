@@ -12,7 +12,7 @@
     function initialize() {
       const eventSource = new EventSource('/saltoleto/events/4');
 
-      eventSource.addEventListener("4", function (event) {
+      eventSource.addEventListener("1", function (event) {
         const msg = event.data;
         Notification.requestPermission(function () {
           if (Notification.permission === 'granted') {
@@ -27,8 +27,9 @@
   </script>
 </head>
 
-<body onload="JavaScript:AutoRefresh(30000)" style="font-size:52em; color:cadetblue; text-align:center">
+<body onload="JavaScript:AutoRefresh(60000)" style="font-size:52em; color:cadetblue; text-align:center">
 <div id="notify" style="width:99%;height:99%;margin:10px;"></div>
 </body>
 
 </html>
+
