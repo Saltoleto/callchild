@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Sala 4</title>
+    <script>
+
+    function AutoRefresh( t ) {
+      setTimeout("location.reload(true)", t)
+      initialize()
+    }
+
+    function initialize() {
+      const eventSource = new EventSource('/saltoleto/events/4');
+
+      eventSource.addEventListener("1", function (event) {
+        const msg = event.data;
+        Notification.requestPermission(function () {
+          if (Notification.permission === 'granted') {
+            var notification = new Notification('Filho sendo chamado', { body: msg });
+            setTimeout(notification.close(), 1 * 1000)
+          }
+        });
+
+        document.getElementById("notify").innerHTML = event.data;
+      });
+    };
+  </script>
+</head>
+
+<body onload="JavaScript:AutoRefresh(60000)" style="font-size:52em; color:cadetblue; text-align:center">
+<div id="notify" style="width:99%;height:99%;margin:10px;"></div>
+</body>
+
+</html>
+

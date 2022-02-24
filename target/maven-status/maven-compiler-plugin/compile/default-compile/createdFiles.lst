@@ -1,0 +1,8 @@
+br\com\callthechild\CallkidsApplication.class
+br\com\callthechild\dto\CallTheChildrenEventDTO.class
+br\com\callthechild\repository\EmitterRepository.class
+br\com\callthechild\service\EmitterService.class
+br\com\callthechild\service\SseNotificationService.class
+br\com\callthechild\service\NotificationService.class
+br\com\callthechild\repository\InMemoryEmitterRepository.class
+br\com\callthechild\controller\CallTheChildrenEventController.class

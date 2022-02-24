@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  mvc:
+    async:
+      request-timeout: -1
+
+server:
+  servlet:
+    context-path: /saltoleto
+
+events:
+  connection:
+    timeout: 180000
